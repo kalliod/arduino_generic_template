@@ -50,4 +50,6 @@ bool Button::pressed() { //returns true if the button has been released and pres
   }
 }
 
-
+bool Button::isReleased() {
+  return released;
+}

@@ -23,4 +23,5 @@ class Button {
   void setInverted(bool _invert) { inverted = _invert; released = !state(); }
   bool pressed(void);
   bool state(void);
+  bool isReleased(void);
 };
