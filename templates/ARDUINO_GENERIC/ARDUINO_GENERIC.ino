@@ -113,20 +113,12 @@ void setup() {
   pinMode(debugLED, OUTPUT);
   digitalWrite(debugLED, LOW);
 
-  /* Pin settings on MCP23017 */
-
   // I2C
   Wire.begin();
   Wire.setClock(100000);
-
   
   /* Pin settings on MCP23017 */
 
-  // I2C
-  Wire.begin();
-  Wire.setClock(100000);
-
-  // MCP23017
   mcp.begin();
 
   // GPIO A:
