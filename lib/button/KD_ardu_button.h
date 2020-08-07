@@ -1,15 +1,11 @@
 #pragma once
 
 #include <Arduino.h>
-#include <SPI.h>
-#include <SD.h>
-#include <Ethernet.h>
-
 
 class Button {
 
   private:
-  int pin = 0;
+  int button_pin = 0;
   bool released = true;
   bool inverted = false;
 
@@ -18,9 +14,9 @@ class Button {
   Button(int, bool);
   Button(int);
   Button(void) { }
-  void setPin(int _pin) { pin = _pin; }
+  void setPin(int);
   void setPullup(bool);
-  void setInverted(bool _invert) { inverted = _invert; released = !state(); }
+  void setInverted(bool);
   bool pressed(void);
   bool state(void);
   bool isReleased(void);
