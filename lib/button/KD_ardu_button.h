@@ -6,7 +6,8 @@ class Button {
 
   private:
   int button_pin = 0;
-  bool released = true;
+  bool wasReleased = true;
+  bool wasPressed = true;
   bool inverted = false;
 
   public:
@@ -18,6 +19,10 @@ class Button {
   void setPullup(bool);
   void setInverted(bool);
   bool pressed(void);
+  bool pressed(int);
+  bool released(void);
+  bool released(int);
   bool state(void);
-  bool isReleased(void);
+  bool GetWasReleased(void);
+  bool GetWasPressed(void);
 };
